@@ -18,4 +18,4 @@ def login_complete(request):
     if user:
         login(request, user)
 
-    return HttpResponseRedirect("/admin/")
+    return HttpResponseRedirect("/")
