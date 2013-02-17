@@ -4,12 +4,13 @@ from setuptools import setup, find_packages
 setup(
     name="django-lastfmauth",
     version=__import__("lastfmauth").__version__,
-    url="http://github.com/matagus/django-lastfm-auth",
+    url="https://github.com/neil-s/django-lastfm-auth",
     license="MIT",
-    description="Django app to let your website visitors register/login using LastFM authentication webservice.",
+    description="Django app to let your website visitors register/login using LastFM authentication webservice." 
+                "Based on https://github.com/matagus/django-lastfm-auth",
 
-    author="Matias Agustin Mendez",
-    author_email="me@matagus.com.ar",
+    author="Neil Satra",
+    author_email="ns532@cam.ac.uk",
 
     packages=find_packages(),
     package_dir={"lastfmauth": "lastfmauth"},
