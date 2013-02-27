@@ -20,8 +20,9 @@ class LastfmAuthBackend:
         authuser = client.login(token=token)
 
         # try to find a user instance with a matching Authuser
-        user, user_created = User.objects.get_or_create(username = authuser.name,
-                                                         first_name=authuser.session_key)
+        user, user_created = User.objects.get_or_create(username = authuser.name.name,
+                                                         first_name=authuser.session_key
+                                                         )
         #^ Hack using superfluous first_name field to store session key to avoid extra profile class
            
         if user_created:
