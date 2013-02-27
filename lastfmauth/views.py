@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 from django.conf import settings
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from urllib import urlencode
 from django.core.urlresolvers import reverse
@@ -33,3 +33,7 @@ def login_complete(request):
     	return HttpResponseRedirect(settings.LASTFM_AUTH_REDIRECT)
     else:
     	return HttpResponseRedirect('/admin/')
+
+def logout(request):
+    logout(request)
+    return redirect('home')
