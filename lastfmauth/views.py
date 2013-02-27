@@ -5,8 +5,6 @@ from django.http import HttpResponseRedirect, HttpResponse
 from urllib import urlencode
 from django.core.urlresolvers import reverse
 
-from lastfmauth.models import LastfmProfile
-
 API_KEY = settings.LASTFM_API_KEY
 
 def do_login(request):
