@@ -4,6 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, HttpResponse
 from urllib import urlencode
 from django.core.urlresolvers import reverse
+from django.shortcuts import redirect
 
 API_KEY = settings.LASTFM_API_KEY
 
@@ -34,6 +35,6 @@ def login_complete(request):
     else:
     	return HttpResponseRedirect('/admin/')
 
-def logout(request):
+def do_logout(request):
     logout(request)
     return redirect('home')
